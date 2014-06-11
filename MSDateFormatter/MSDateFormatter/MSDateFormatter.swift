@@ -111,66 +111,66 @@ extension NSDate {
 
 extension Int {
     var second: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.second = self
         return components
     }
     var seconds: NSDateComponents {
-        return self.second
+    return self.second
     }
     
     var minute: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.minute = self
         return components
     }
     var minutes: NSDateComponents {
-        return self.minute
+    return self.minute
     }
     
     var hour: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.hour = self
         return components
     }
     var hours: NSDateComponents {
-        return self.hour
+    return self.hour
     }
     
     var day: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.day = self
         return components
     }
     var days: NSDateComponents {
-        return self.day
+    return self.day
     }
     
     var week: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.weekOfYear = self
         return components
     }
     var weeks: NSDateComponents {
-        return self.week
+    return self.week
     }
     
     var month: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.month = self
         return components
     }
     var months: NSDateComponents {
-        return self.month
+    return self.month
     }
     
     var year: NSDateComponents {
-        var components = NSDateComponents()
+    var components = NSDateComponents()
         components.year = self
         return components
     }
     var years: NSDateComponents {
-        return self.year
+    return self.year
     }
 }
 

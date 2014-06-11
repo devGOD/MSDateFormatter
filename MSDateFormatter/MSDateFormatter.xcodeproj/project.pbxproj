@@ -7,40 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F02008781947FF4B00E01526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02008771947FF4B00E01526 /* AppDelegate.swift */; };
-		F020087A1947FF4B00E01526 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02008791947FF4B00E01526 /* Images.xcassets */; };
-		F02008861947FF4C00E01526 /* MSDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02008851947FF4C00E01526 /* MSDateFormatterTests.swift */; };
+		F0EF90E919481ABE00276306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF90E819481ABE00276306 /* AppDelegate.swift */; };
+		F0EF90EB19481ABE00276306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EF90EA19481ABE00276306 /* Images.xcassets */; };
+		F0EF90F719481ABE00276306 /* MSDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF90F619481ABE00276306 /* MSDateFormatterTests.swift */; };
+		F0EF910119481AEA00276306 /* MSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF910019481AEA00276306 /* MSDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F02008801947FF4C00E01526 /* PBXContainerItemProxy */ = {
+		F0EF90F119481ABE00276306 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F020086A1947FF4B00E01526 /* Project object */;
+			containerPortal = F0EF90DB19481ABE00276306 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F02008711947FF4B00E01526;
+			remoteGlobalIDString = F0EF90E219481ABE00276306;
 			remoteInfo = MSDateFormatter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F02008721947FF4B00E01526 /* MSDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F02008761947FF4B00E01526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F02008771947FF4B00E01526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F02008791947FF4B00E01526 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F020087F1947FF4C00E01526 /* MSDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F02008841947FF4C00E01526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F02008851947FF4C00E01526 /* MSDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDateFormatterTests.swift; sourceTree = "<group>"; };
+		F0EF90E319481ABE00276306 /* MSDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EF90E719481ABE00276306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0EF90E819481ABE00276306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0EF90EA19481ABE00276306 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F0EF90F019481ABE00276306 /* MSDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EF90F519481ABE00276306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0EF90F619481ABE00276306 /* MSDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDateFormatterTests.swift; sourceTree = "<group>"; };
+		F0EF910019481AEA00276306 /* MSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F020086F1947FF4B00E01526 /* Frameworks */ = {
+		F0EF90E019481ABE00276306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F020087C1947FF4C00E01526 /* Frameworks */ = {
+		F0EF90ED19481ABE00276306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,55 +52,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F02008691947FF4B00E01526 = {
+		F0EF90DA19481ABE00276306 = {
 			isa = PBXGroup;
 			children = (
-				F02008741947FF4B00E01526 /* MSDateFormatter */,
-				F02008821947FF4C00E01526 /* MSDateFormatterTests */,
-				F02008731947FF4B00E01526 /* Products */,
+				F0EF90E519481ABE00276306 /* MSDateFormatter */,
+				F0EF90F319481ABE00276306 /* MSDateFormatterTests */,
+				F0EF90E419481ABE00276306 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F02008731947FF4B00E01526 /* Products */ = {
+		F0EF90E419481ABE00276306 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F02008721947FF4B00E01526 /* MSDateFormatter.app */,
-				F020087F1947FF4C00E01526 /* MSDateFormatterTests.xctest */,
+				F0EF90E319481ABE00276306 /* MSDateFormatter.app */,
+				F0EF90F019481ABE00276306 /* MSDateFormatterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F02008741947FF4B00E01526 /* MSDateFormatter */ = {
+		F0EF90E519481ABE00276306 /* MSDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				F02008771947FF4B00E01526 /* AppDelegate.swift */,
-				F02008791947FF4B00E01526 /* Images.xcassets */,
-				F02008751947FF4B00E01526 /* Supporting Files */,
+				F0EF90E819481ABE00276306 /* AppDelegate.swift */,
+				F0EF90EA19481ABE00276306 /* Images.xcassets */,
+				F0EF90E619481ABE00276306 /* Supporting Files */,
+				F0EF910019481AEA00276306 /* MSDateFormatter.swift */,
 			);
 			path = MSDateFormatter;
 			sourceTree = "<group>";
 		};
-		F02008751947FF4B00E01526 /* Supporting Files */ = {
+		F0EF90E619481ABE00276306 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F02008761947FF4B00E01526 /* Info.plist */,
+				F0EF90E719481ABE00276306 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F02008821947FF4C00E01526 /* MSDateFormatterTests */ = {
+		F0EF90F319481ABE00276306 /* MSDateFormatterTests */ = {
 			isa = PBXGroup;
 			children = (
-				F02008851947FF4C00E01526 /* MSDateFormatterTests.swift */,
-				F02008831947FF4C00E01526 /* Supporting Files */,
+				F0EF90F619481ABE00276306 /* MSDateFormatterTests.swift */,
+				F0EF90F419481ABE00276306 /* Supporting Files */,
 			);
 			path = MSDateFormatterTests;
 			sourceTree = "<group>";
 		};
-		F02008831947FF4C00E01526 /* Supporting Files */ = {
+		F0EF90F419481ABE00276306 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F02008841947FF4C00E01526 /* Info.plist */,
+				F0EF90F519481ABE00276306 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -106,13 +109,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F02008711947FF4B00E01526 /* MSDateFormatter */ = {
+		F0EF90E219481ABE00276306 /* MSDateFormatter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F02008891947FF4C00E01526 /* Build configuration list for PBXNativeTarget "MSDateFormatter" */;
+			buildConfigurationList = F0EF90FA19481ABE00276306 /* Build configuration list for PBXNativeTarget "MSDateFormatter" */;
 			buildPhases = (
-				F020086E1947FF4B00E01526 /* Sources */,
-				F020086F1947FF4B00E01526 /* Frameworks */,
-				F02008701947FF4B00E01526 /* Resources */,
+				F0EF90DF19481ABE00276306 /* Sources */,
+				F0EF90E019481ABE00276306 /* Frameworks */,
+				F0EF90E119481ABE00276306 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -120,73 +123,73 @@
 			);
 			name = MSDateFormatter;
 			productName = MSDateFormatter;
-			productReference = F02008721947FF4B00E01526 /* MSDateFormatter.app */;
+			productReference = F0EF90E319481ABE00276306 /* MSDateFormatter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F020087E1947FF4C00E01526 /* MSDateFormatterTests */ = {
+		F0EF90EF19481ABE00276306 /* MSDateFormatterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F020088C1947FF4C00E01526 /* Build configuration list for PBXNativeTarget "MSDateFormatterTests" */;
+			buildConfigurationList = F0EF90FD19481ABE00276306 /* Build configuration list for PBXNativeTarget "MSDateFormatterTests" */;
 			buildPhases = (
-				F020087B1947FF4C00E01526 /* Sources */,
-				F020087C1947FF4C00E01526 /* Frameworks */,
-				F020087D1947FF4C00E01526 /* Resources */,
+				F0EF90EC19481ABE00276306 /* Sources */,
+				F0EF90ED19481ABE00276306 /* Frameworks */,
+				F0EF90EE19481ABE00276306 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F02008811947FF4C00E01526 /* PBXTargetDependency */,
+				F0EF90F219481ABE00276306 /* PBXTargetDependency */,
 			);
 			name = MSDateFormatterTests;
 			productName = MSDateFormatterTests;
-			productReference = F020087F1947FF4C00E01526 /* MSDateFormatterTests.xctest */;
+			productReference = F0EF90F019481ABE00276306 /* MSDateFormatterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F020086A1947FF4B00E01526 /* Project object */ = {
+		F0EF90DB19481ABE00276306 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Michael Vu";
 				TargetAttributes = {
-					F02008711947FF4B00E01526 = {
+					F0EF90E219481ABE00276306 = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					F020087E1947FF4C00E01526 = {
+					F0EF90EF19481ABE00276306 = {
 						CreatedOnToolsVersion = 6.0;
-						TestTargetID = F02008711947FF4B00E01526;
+						TestTargetID = F0EF90E219481ABE00276306;
 					};
 				};
 			};
-			buildConfigurationList = F020086D1947FF4B00E01526 /* Build configuration list for PBXProject "MSDateFormatter" */;
+			buildConfigurationList = F0EF90DE19481ABE00276306 /* Build configuration list for PBXProject "MSDateFormatter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F02008691947FF4B00E01526;
-			productRefGroup = F02008731947FF4B00E01526 /* Products */;
+			mainGroup = F0EF90DA19481ABE00276306;
+			productRefGroup = F0EF90E419481ABE00276306 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F02008711947FF4B00E01526 /* MSDateFormatter */,
-				F020087E1947FF4C00E01526 /* MSDateFormatterTests */,
+				F0EF90E219481ABE00276306 /* MSDateFormatter */,
+				F0EF90EF19481ABE00276306 /* MSDateFormatterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F02008701947FF4B00E01526 /* Resources */ = {
+		F0EF90E119481ABE00276306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F020087A1947FF4B00E01526 /* Images.xcassets in Resources */,
+				F0EF90EB19481ABE00276306 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F020087D1947FF4C00E01526 /* Resources */ = {
+		F0EF90EE19481ABE00276306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,34 +199,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F020086E1947FF4B00E01526 /* Sources */ = {
+		F0EF90DF19481ABE00276306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02008781947FF4B00E01526 /* AppDelegate.swift in Sources */,
+				F0EF910119481AEA00276306 /* MSDateFormatter.swift in Sources */,
+				F0EF90E919481ABE00276306 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F020087B1947FF4C00E01526 /* Sources */ = {
+		F0EF90EC19481ABE00276306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02008861947FF4C00E01526 /* MSDateFormatterTests.swift in Sources */,
+				F0EF90F719481ABE00276306 /* MSDateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F02008811947FF4C00E01526 /* PBXTargetDependency */ = {
+		F0EF90F219481ABE00276306 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F02008711947FF4B00E01526 /* MSDateFormatter */;
-			targetProxy = F02008801947FF4C00E01526 /* PBXContainerItemProxy */;
+			target = F0EF90E219481ABE00276306 /* MSDateFormatter */;
+			targetProxy = F0EF90F119481ABE00276306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F02008871947FF4C00E01526 /* Debug */ = {
+		F0EF90F819481ABE00276306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +269,7 @@
 			};
 			name = Debug;
 		};
-		F02008881947FF4C00E01526 /* Release */ = {
+		F0EF90F919481ABE00276306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -300,7 +304,7 @@
 			};
 			name = Release;
 		};
-		F020088A1947FF4C00E01526 /* Debug */ = {
+		F0EF90FB19481ABE00276306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -311,7 +315,7 @@
 			};
 			name = Debug;
 		};
-		F020088B1947FF4C00E01526 /* Release */ = {
+		F0EF90FC19481ABE00276306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -322,7 +326,7 @@
 			};
 			name = Release;
 		};
-		F020088D1947FF4C00E01526 /* Debug */ = {
+		F0EF90FE19481ABE00276306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MSDateFormatter.app/MSDateFormatter";
@@ -342,7 +346,7 @@
 			};
 			name = Debug;
 		};
-		F020088E1947FF4C00E01526 /* Release */ = {
+		F0EF90FF19481ABE00276306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MSDateFormatter.app/MSDateFormatter";
@@ -361,32 +365,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F020086D1947FF4B00E01526 /* Build configuration list for PBXProject "MSDateFormatter" */ = {
+		F0EF90DE19481ABE00276306 /* Build configuration list for PBXProject "MSDateFormatter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F02008871947FF4C00E01526 /* Debug */,
-				F02008881947FF4C00E01526 /* Release */,
+				F0EF90F819481ABE00276306 /* Debug */,
+				F0EF90F919481ABE00276306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F02008891947FF4C00E01526 /* Build configuration list for PBXNativeTarget "MSDateFormatter" */ = {
+		F0EF90FA19481ABE00276306 /* Build configuration list for PBXNativeTarget "MSDateFormatter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F020088A1947FF4C00E01526 /* Debug */,
-				F020088B1947FF4C00E01526 /* Release */,
+				F0EF90FB19481ABE00276306 /* Debug */,
+				F0EF90FC19481ABE00276306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		F020088C1947FF4C00E01526 /* Build configuration list for PBXNativeTarget "MSDateFormatterTests" */ = {
+		F0EF90FD19481ABE00276306 /* Build configuration list for PBXNativeTarget "MSDateFormatterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F020088D1947FF4C00E01526 /* Debug */,
-				F020088E1947FF4C00E01526 /* Release */,
+				F0EF90FE19481ABE00276306 /* Debug */,
+				F0EF90FF19481ABE00276306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F020086A1947FF4B00E01526 /* Project object */;
+	rootObject = F0EF90DB19481ABE00276306 /* Project object */;
 }
