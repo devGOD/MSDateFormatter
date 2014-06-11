@@ -1,8 +1,6 @@
 # MSDateFormatter
 
-[![Version](https://img.shields.io/cocoapods/v/MSDateFormatter.svg?style=flat)](http://cocoadocs.org/docsets/MSDateFormatter)
-[![License](https://img.shields.io/cocoapods/l/MSDateFormatter.svg?style=flat)](http://cocoadocs.org/docsets/MSDateFormatter)
-[![Platform](https://img.shields.io/cocoapods/p/MSDateFormatter.svg?style=flat)](http://cocoadocs.org/docsets/MSDateFormatter)
+A delightful NSDate category for iOS
 
 ## Usage
 
