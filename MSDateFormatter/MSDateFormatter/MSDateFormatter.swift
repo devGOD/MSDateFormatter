@@ -89,6 +89,44 @@ extension NSDate {
         var secondsFromGMT = -NSTimeInterval(localTimeZone.secondsFromGMTForDate(self))
         return self.dateByAddingTimeInterval(secondsFromGMT)
     }
+    func beginningOfDay() -> NSDate {
+        let components = currentCalendar.components(.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit, fromDate: self)
+        return currentCalendar.dateFromComponents(components);
+    }
+    func endOfDay() -> NSDate {
+        let components = NSDateComponents()
+        components.day = 1
+        return currentCalendar.dateByAddingComponents(components, toDate: self.beginningOfDay(), options: nil).dateByAddingTimeInterval(-1)
+    }
+    func beginningOfWeek() -> NSDate {
+        let components = currentCalendar.components(.YearCalendarUnit | .MonthCalendarUnit | .WeekdayCalendarUnit | .DayCalendarUnit, fromDate: self)
+        var offset = components.weekday - NSInteger(currentCalendar.firstWeekday)
+        components.day = components.day - offset
+        return currentCalendar.dateFromComponents(components)
+    }
+    func endOfWeek() -> NSDate {
+        let components = NSDateComponents()
+        components.setWeek(1)
+        return currentCalendar.dateByAddingComponents(components, toDate: self.beginningOfWeek(), options: nil).dateByAddingTimeInterval(-1)
+    }
+    func beginningOfMonth() -> NSDate {
+        let components = currentCalendar.components(.YearCalendarUnit | .MonthCalendarUnit, fromDate: self)
+        return currentCalendar.dateFromComponents(components)
+    }
+    func endOfMonth() -> NSDate {
+        let components = NSDateComponents()
+        components.month = 1
+        return currentCalendar.dateByAddingComponents(components, toDate: self.beginningOfMonth(), options: nil).dateByAddingTimeInterval(-1)
+    }
+    func beginningOfYear() -> NSDate {
+        let components = currentCalendar.components(.YearCalendarUnit, fromDate: self)
+        return currentCalendar.dateFromComponents(components)
+    }
+    func endOfYear() -> NSDate {
+        let components = NSDateComponents()
+        components.year = 1
+        return currentCalendar.dateByAddingComponents(components, toDate: self.beginningOfYear(), options: nil).dateByAddingTimeInterval(-1)
+    }
     func format(sformat:String) -> String {
         formatter.dateFormat = sformat
         return formatter.stringFromDate(self)
