@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Michael Vu. All rights reserved.
 //
 
+import CoreFoundation
 import Foundation
 
 let formatter: NSDateFormatter = NSDateFormatter()
@@ -75,6 +76,18 @@ extension NSDate {
     }
     func ago(components:NSDateComponents) -> NSDate {
         return currentCalendar.dateByAddingComponents(-components, toDate: self, options: nil)
+    }
+    func toLocal() -> NSDate {
+        let localTimeZone = NSTimeZone.localTimeZone()
+        let date = NSDate()
+        var secondsFromGMT = NSTimeInterval(localTimeZone.secondsFromGMTForDate(self))
+        return self.dateByAddingTimeInterval(secondsFromGMT)
+    }
+    func toGlobal() -> NSDate {
+        let localTimeZone = NSTimeZone.localTimeZone()
+        let date = NSDate()
+        var secondsFromGMT = -NSTimeInterval(localTimeZone.secondsFromGMTForDate(self))
+        return self.dateByAddingTimeInterval(secondsFromGMT)
     }
     func format(sformat:String) -> String {
         formatter.dateFormat = sformat
