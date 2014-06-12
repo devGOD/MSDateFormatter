@@ -11,6 +11,130 @@ import Foundation
 
 let formatter: NSDateFormatter = NSDateFormatter()
 let currentCalendar = NSCalendar.currentCalendar()
+let bundle = NSBundle.mainBundle()
+let significantUnits = NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.WeekCalendarUnit | NSCalendarUnit.DayCalendarUnit | NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit | NSCalendarUnit.SecondCalendarUnit
+let localizationTable = "MSDateFormatter"
+
+func calendarUnitFromString(string:String) -> NSCalendarUnit {
+    switch string {
+        case "year":
+            return .YearCalendarUnit
+        case "month":
+            return .MonthCalendarUnit
+        case "week":
+            return .WeekCalendarUnit
+        case "day":
+            return .DayCalendarUnit
+        case "hour":
+            return .HourCalendarUnit
+        case "minute":
+            return .MinuteCalendarUnit
+        case "second":
+            return .SecondCalendarUnit
+        default:
+            return nil
+    }
+}
+
+func getNormalizedCalendarUnit(unit:NSCalendarUnit) -> NSCalendarUnit {
+    switch unit {
+    case NSCalendarUnit.WeekOfMonthCalendarUnit, NSCalendarUnit.WeekOfYearCalendarUnit:
+        return .WeekCalendarUnit
+    case NSCalendarUnit.WeekdayCalendarUnit, NSCalendarUnit.WeekdayOrdinalCalendarUnit:
+        return .DayCalendarUnit
+    default:
+        return unit;
+    }
+}
+
+func compareCalendarUnitSignificance(unit:NSCalendarUnit, other:NSCalendarUnit) -> NSComparisonResult {
+    let nUnit = getNormalizedCalendarUnit(unit)
+    let nOther = getNormalizedCalendarUnit(other)
+    
+    if (nUnit == .WeekCalendarUnit) ^ (nOther == .WeekCalendarUnit) {
+        if nUnit == .WeekCalendarUnit {
+            switch nUnit {
+            case NSCalendarUnit.YearCalendarUnit, NSCalendarUnit.MonthCalendarUnit:
+                return .OrderedAscending
+            default:
+                return .OrderedDescending
+            }
+        } else {
+            switch nOther {
+            case NSCalendarUnit.YearCalendarUnit, NSCalendarUnit.MonthCalendarUnit:
+                return .OrderedDescending
+            default:
+                return .OrderedAscending
+            }
+        }
+    } else {
+        if nUnit.value > nOther.value {
+            return .OrderedAscending
+        } else if (nUnit.value < nOther.value) {
+            return .OrderedDescending
+        } else {
+            return .OrderedSame
+        }
+    }
+}
+
+func localizedStringForNumber(number:NSInteger, unit:NSCalendarUnit, short:Bool = false) -> String {
+    let singular = (number == 1)
+    switch unit {
+        case NSCalendarUnit.YearCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "yr" : "year", value: nil, table: localizationTable)
+        case NSCalendarUnit.YearCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "yrs" : "years", value: nil, table: localizationTable)
+        case NSCalendarUnit.MonthCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "mo" : "month", value: nil, table: localizationTable)
+        case NSCalendarUnit.MonthCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "mos" : "months", value: nil, table: localizationTable)
+        case NSCalendarUnit.WeekCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "wk" : "week", value: nil, table: localizationTable)
+        case NSCalendarUnit.WeekCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "wks" : "weeks", value: nil, table: localizationTable)
+        case NSCalendarUnit.DayCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "day" : "day", value: nil, table: localizationTable)
+        case NSCalendarUnit.DayCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "days" : "days", value: nil, table: localizationTable)
+        case NSCalendarUnit.HourCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "hr" : "hour", value: nil, table: localizationTable)
+        case NSCalendarUnit.HourCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "hrs" : "hours", value: nil, table: localizationTable)
+        case NSCalendarUnit.MinuteCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "min" : "minute", value: nil, table: localizationTable)
+        case NSCalendarUnit.MinuteCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "mins" : "minutes", value: nil, table: localizationTable)
+        case NSCalendarUnit.SecondCalendarUnit where singular:
+            return bundle.localizedStringForKey(short ? "s" : "second", value: nil, table: localizationTable)
+        case NSCalendarUnit.SecondCalendarUnit where !singular:
+            return bundle.localizedStringForKey(short ? "s" : "seconds", value: nil, table: localizationTable)
+        default:
+            return ""
+    }
+}
+
+func localizedSimpleStringForComponents(components:NSDateComponents) -> String {
+    if (components.year == -1) {
+        return bundle.localizedStringForKey("last year", value: nil, table: localizationTable)
+    } else if (components.month == -1 && components.year == 0) {
+        return bundle.localizedStringForKey("last month", value: nil, table: localizationTable)
+    } else if (components.week() == -1 && components.year == 0 && components.month == 0) {
+        return bundle.localizedStringForKey("last week", value: nil, table: localizationTable)
+    } else if (components.day == -1 && components.year == 0 && components.month == 0 && components.week() == 0) {
+        return bundle.localizedStringForKey("yesterday", value: nil, table: localizationTable)
+    }
+    if (components.year == 1) {
+        return bundle.localizedStringForKey("next year", value: nil, table: localizationTable)
+    } else if (components.month == 1 && components.year == 0) {
+        return bundle.localizedStringForKey("next month", value: nil, table: localizationTable)
+    } else if (components.week() == 1 && components.year == 0 && components.month == 0) {
+        return bundle.localizedStringForKey("next week", value: nil, table: localizationTable)
+    } else if (components.day == 1 && components.year == 0 && components.month == 0 && components.week() == 0) {
+        return bundle.localizedStringForKey("tomorrow", value: nil, table: localizationTable)
+    }
+    return ""
+}
 
 extension NSDateComponents {
     func ago() -> NSDate {
@@ -76,6 +200,74 @@ extension NSDate {
     }
     func ago(components:NSDateComponents) -> NSDate {
         return currentCalendar.dateByAddingComponents(-components, toDate: self, options: nil)
+    }
+    func timeAgo() -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self)
+    }
+    func timeAgoShort() -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, short:true)
+    }
+    func timeAgoLong(level:Int=999) -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, level:level)
+    }
+    func timeAgoSimple() -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, simple:true)
+    }
+    func dateTimeAgo() -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, approximate: true)
+    }
+    func dateTimeAgoShort() -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, approximate: true, short:true)
+    }
+    func dateTimeAgoLong(level:Int=999) -> String {
+        return self.timeDateAgo(NSDate.date(), toDate: self, approximate: true, level:level)
+    }
+    func timeDateAgo(fromDate:NSDate, toDate:NSDate, simple:Bool = false, approximate:Bool = false, short:Bool = false, level:Int = 0) -> String {
+        let seconds = fromDate.timeIntervalSinceDate(toDate)
+        if fabs(seconds) < 1 {
+            return bundle.localizedStringForKey("just now", value: nil, table: localizationTable);
+        }
+        
+        let components = currentCalendar.components(significantUnits, fromDate: fromDate, toDate: toDate, options: nil)
+        if simple {
+            let simpleString = localizedSimpleStringForComponents(components)
+            if simpleString.isEmpty == false {
+                return simpleString
+            }
+        }
+        var string = String()
+        var isApproximate:Bool = false
+        var numberOfUnits:Int = 0
+        let unitList: String[] = ["year", "month", "week", "day", "hour", "minute", "second"]
+        for unitName in unitList {
+            let unit = calendarUnitFromString(unitName)
+            if (significantUnits & unit) && compareCalendarUnitSignificance(.SecondCalendarUnit, unit) != .OrderedDescending {
+                let number:NSNumber = NSNumber(float: fabsf(components.valueForKey(unitName).floatValue))
+                if Bool(number.integerValue) {
+                    let suffix = String(format: bundle.localizedStringForKey("Suffix Expression Format String", value: "%@ %@", table: localizationTable), arguments: [number, localizedStringForNumber(number.unsignedIntegerValue, unit, short:short)])
+                    if string.isEmpty {
+                        string = suffix
+                    } else if numberOfUnits < level {
+                        string += String(format: " %@", arguments: [suffix])
+                    } else {
+                        isApproximate = true
+                    }
+                    numberOfUnits += 1
+                }
+            }
+        }
+        if string.isEmpty == false {
+            if seconds > 0 {
+                string = String(format: bundle.localizedStringForKey("Date Format String", value: "%@ %@", table: localizationTable), arguments: [string, bundle.localizedStringForKey("ago", value: nil, table: localizationTable)])
+            } else {
+                string = String(format: bundle.localizedStringForKey("Date Format String", value: "%@ %@", table: localizationTable), arguments: [string, bundle.localizedStringForKey("from now", value: nil, table: localizationTable)])
+            }
+            
+            if (isApproximate && approximate) {
+                string = String(format: bundle.localizedStringForKey("about %@", value: nil, table: localizationTable), arguments: [string])
+            }
+        }
+        return string
     }
     func toLocal() -> NSDate {
         let localTimeZone = NSTimeZone.localTimeZone()

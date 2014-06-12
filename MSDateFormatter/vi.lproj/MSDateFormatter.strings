@@ -1,0 +1,47 @@
+/* 
+  MSDateFormatter.strings
+  MSDateFormatter
+
+  Created by Michael on 11/6/14.
+  Copyright (c) 2014 Michael Vu. All rights reserved.
+*/
+
+"Date Format String" = "%1$@ %2$@";
+"about %@" = "khoảng %@";
+"from now" = "từ bây giờ";
+"just now" = "mới đây";
+"ago" = "trước";
+"s" = "giây";
+"second" = "giây";
+"seconds" = "giây";
+"min" = "phút";
+"mins" = "phút";
+"minute" = "phút";
+"minutes" = "phút";
+"hr" = "giờ";
+"hrs" = "giờ";
+"hour" = "giờ";
+"hours" = "giờ";
+"day" = "ngày";
+"days" = "ngày";
+"wk" = "tuần";
+"wks" = "tuần";
+"week" = "tuần";
+"weeks" = "tuần";
+"mo" = "tháng";
+"mos" = "tháng";
+"month" = "tháng";
+"months" = "tháng";
+"yr" = "năm";
+"yrs" = "năm";
+"year" = "năm";
+"years" = "năm";
+"today"= "hôm nay";
+"yesterday" = "hôm qua";
+"tomorrow"= "ngày mai";
+"last week" = "tuần trước";
+"last month" = "tháng trước";
+"last year" = "năm trước";
+"next week" = "tuần sau";
+"next month" = "tháng sau";
+"next year" = "năm sau";

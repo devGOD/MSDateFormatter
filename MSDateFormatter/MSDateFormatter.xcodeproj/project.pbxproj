@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F07225E71948C02E00EB29E0 /* MSDateFormatter.strings in Resources */ = {isa = PBXBuildFile; fileRef = F07225E91948C02E00EB29E0 /* MSDateFormatter.strings */; };
 		F0EF90E919481ABE00276306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF90E819481ABE00276306 /* AppDelegate.swift */; };
 		F0EF90EB19481ABE00276306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EF90EA19481ABE00276306 /* Images.xcassets */; };
 		F0EF90F719481ABE00276306 /* MSDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF90F619481ABE00276306 /* MSDateFormatterTests.swift */; };
 		F0EF910119481AEA00276306 /* MSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF910019481AEA00276306 /* MSDateFormatter.swift */; };
-		F0EF9103194835A300276306 /* MSDateFormatter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0EF9102194835A300276306 /* MSDateFormatter.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +25,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F07225E81948C02E00EB29E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MSDateFormatter.strings; sourceTree = "<group>"; };
+		F07225EB1948C12F00EB29E0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MSDateFormatter.strings; sourceTree = "<group>"; };
+		F0A7FDFD19497FFB00BE795D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/MSDateFormatter.strings; sourceTree = "<group>"; };
 		F0EF90E319481ABE00276306 /* MSDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EF90E719481ABE00276306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0EF90E819481ABE00276306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +36,6 @@
 		F0EF90F519481ABE00276306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0EF90F619481ABE00276306 /* MSDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDateFormatterTests.swift; sourceTree = "<group>"; };
 		F0EF910019481AEA00276306 /* MSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDateFormatter.swift; sourceTree = "<group>"; };
-		F0EF9102194835A300276306 /* MSDateFormatter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MSDateFormatter.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F07225E41948BFF800EB29E0 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				F07225E91948C02E00EB29E0 /* MSDateFormatter.strings */,
+			);
+			name = Localizations;
+			sourceTree = "<group>";
+		};
 		F0EF90DA19481ABE00276306 = {
 			isa = PBXGroup;
 			children = (
+				F07225E41948BFF800EB29E0 /* Localizations */,
 				F0EF90E519481ABE00276306 /* MSDateFormatter */,
 				F0EF90F319481ABE00276306 /* MSDateFormatterTests */,
 				F0EF90E419481ABE00276306 /* Products */,
@@ -79,7 +90,6 @@
 				F0EF90EA19481ABE00276306 /* Images.xcassets */,
 				F0EF90E619481ABE00276306 /* Supporting Files */,
 				F0EF910019481AEA00276306 /* MSDateFormatter.swift */,
-				F0EF9102194835A300276306 /* MSDateFormatter.bundle */,
 			);
 			path = MSDateFormatter;
 			sourceTree = "<group>";
@@ -171,6 +181,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
+				vi,
 			);
 			mainGroup = F0EF90DA19481ABE00276306;
 			productRefGroup = F0EF90E419481ABE00276306 /* Products */;
@@ -188,8 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0EF9103194835A300276306 /* MSDateFormatter.bundle in Resources */,
 				F0EF90EB19481ABE00276306 /* Images.xcassets in Resources */,
+				F07225E71948C02E00EB29E0 /* MSDateFormatter.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +242,19 @@
 			targetProxy = F0EF90F119481ABE00276306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F07225E91948C02E00EB29E0 /* MSDateFormatter.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F07225E81948C02E00EB29E0 /* en */,
+				F07225EB1948C12F00EB29E0 /* ja */,
+				F0A7FDFD19497FFB00BE795D /* vi */,
+			);
+			name = MSDateFormatter.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F0EF90F819481ABE00276306 /* Debug */ = {
@@ -385,6 +411,7 @@
 				F0EF90FC19481ABE00276306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0EF90FD19481ABE00276306 /* Build configuration list for PBXNativeTarget "MSDateFormatterTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +420,7 @@
 				F0EF90FF19481ABE00276306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

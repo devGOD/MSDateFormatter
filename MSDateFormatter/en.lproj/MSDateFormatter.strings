@@ -1,0 +1,47 @@
+/* 
+  MSDateFormatter.strings
+  MSDateFormatter
+
+  Created by Michael on 11/6/14.
+  Copyright (c) 2014 Michael Vu. All rights reserved.
+*/
+
+"Date Format String" = "%1$@ %2$@";
+"about %@" = "about %@";
+"from now" = "from now";
+"just now" = "just now";
+"ago" = "ago";
+"s" = "s";
+"second" = "second";
+"seconds" = "seconds";
+"min" = "min";
+"mins" = "mins";
+"minute" = "minute";
+"minutes" = "minutes";
+"hr" = "hr";
+"hrs" = "hrs";
+"hour" = "hour";
+"hours" = "hours";
+"day" = "day";
+"days" = "days";
+"wk" = "wk";
+"wks" = "wks";
+"week" = "week";
+"weeks" = "weeks";
+"mo" = "mo";
+"mos" = "mos";
+"month" = "month";
+"months" = "months";
+"yr" = "yr";
+"yrs" = "yrs";
+"year" = "year";
+"years" = "years";
+"today"= "today";
+"yesterday" = "yesterday";
+"tomorrow"= "tomorrow";
+"last week" = "last week";
+"last month" = "last month";
+"last year" = "last year";
+"next week" = "next week";
+"next month" = "next month";
+"next year" = "next year";
